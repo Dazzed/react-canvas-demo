@@ -17,8 +17,8 @@ const URLImage = ({ image }) => {
       offsetX={img ? img.width / 2 : 0}
       offsetY={img ? img.height / 2 : 0}
       draggable
-      width={100}
-      height={100}
+      width={70}
+      height={70}
     />
   );
 };
@@ -32,53 +32,53 @@ const App = () => {
       <div className="text-center">Try to drag the image into the stage</div>
       <br />
       <div className="row">
-        <div className="col-sm">
+        <div className="col-xs">
           <img
             alt="react"
             src={reactImg}
             draggable="true"
             style={{ margin: '10px' }}
-            width="100px"
-            height="100px"
+            width="70px"
+            height="70px"
             onDragStart={e => {
               dragUrl.current = e.target.src;
             }}
           />
         </div>
-        <div className="col-sm">
+        <div className="col-xs">
           <img
             alt="circle"
             src={circle}
             draggable="true"
             style={{ margin: '10px' }}
-            width="100px"
-            height="100px"
+            width="70px"
+            height="70px"
             onDragStart={e => {
               dragUrl.current = e.target.src;
             }}
           />
         </div>
-        <div className="col-sm">
+        <div className="col-xs">
           <img
             alt="triangle"
             src={triangle}
             draggable="true"
             style={{ margin: '10px' }}
-            width="100px"
-            height="100px"
+            width="70px"
+            height="70px"
             onDragStart={e => {
               dragUrl.current = e.target.src;
             }}
           />
         </div>
-        <div className="col-sm">
+        <div className="col-xs">
           <img
             alt="square"
             src={square}
             draggable="true"
             style={{ margin: '10px' }}
-            width="100px"
-            height="100px"
+            width="70px"
+            height="70px"
             onDragStart={e => {
               dragUrl.current = e.target.src;
             }}
@@ -102,8 +102,8 @@ const App = () => {
         onDragOver={e => e.preventDefault()}
       >
         <Stage
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={window.innerWidth - 40}
+          height={window.innerHeight - 275}
           style={{ border: '1px solid grey', margin: '10px' }}
           ref={stageRef}
         >
